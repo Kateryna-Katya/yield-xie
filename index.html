@@ -1,56 +1,458 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/yield-xie/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <script type="module" crossorigin src="/yield-xie/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/yield-xie/assets/styles-guStct1H.css">
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yield-Xie | IT-школа нового поколения</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" crossorigin src="/yield-xie/assets/main-C_D-p7IZ.js"></script>
+    <link rel="stylesheet" crossorigin href="/yield-xie/assets/main-BSO1k4iq.css">
   </head>
   <body>
     <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
+  <div class="container header__container">
+    <a href="./#hero" class="logo">
+      <span class="logo__icon"></span>
+      <span class="logo__text">Yield-Xie</span>
+    </a>
+
+    <nav class="nav" id="main-nav">
+      <ul class="nav__list">
+        <li><a href="./#hero" class="nav__link">Главная</a></li>
+        <li><a href="./#about" class="nav__link">О платформе</a></li>
+        <li><a href="./#courses" class="nav__link">Преимущества</a></li>
+        <li><a href="./#innovations" class="nav__link">Инновации</a></li>
+        <li><a href="./#blog" class="nav__link">Блог</a></li>
+        <li><a href="./#contact" class="nav__link">Контакты</a></li>
       </ul>
     </nav>
+
+    <button class="burger" id="burger-btn" aria-label="Открыть меню">
+      <span></span>
+    </button>
   </div>
 </header>
 
-
     <main>
       <!-- Loads the specified .html file -->
-      
+      <section class="hero" id="hero">
+    <div class="hero__visual">
+        <svg class="hero__svg" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:var(--color-mustard);stop-opacity:0.2" />
+                    <stop offset="100%" style="stop-color:var(--color-mustard);stop-opacity:0" />
+                </linearGradient>
+            </defs>
+            <circle class="hero__blob" cx="400" cy="400" r="150" fill="url(#grad1)" />
+            <path class="hero__path" d="M100,200 Q400,100 700,200 T700,600" stroke="var(--color-mustard)"
+                fill="transparent" stroke-width="0.5" stroke-dasharray="5,5" />
+            <rect class="hero__rect" x="200" y="200" width="400" height="400" stroke="var(--color-mustard)"
+                fill="transparent" stroke-width="0.2" opacity="0.3" />
+        </svg>
+    </div>
+
+    <div class="container hero__container">
+        <div class="hero__content">
+            <div class="hero__badge animate-fade">Технология нового поколения</div>
+            <h1 class="hero__title" id="hero-title">Постройте карьеру которая работает на вас</h1>
+            <p class="hero__subtitle">Инновационная IT-школа Yield-Xie: от фундаментальных основ до
+                передовой цифровой инфраструктуры.</p>
+            <div class="hero__actions animate-fade-delay">
+                <a href="#contact" class="btn btn--primary">Начать сейчас</a>
+                <a href="#about" class="btn btn--outline">Узнать детали</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+                d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.83C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                fill="var(--color-light-olive)"></path>
+        </svg>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="container about__container">
+        <div class="about__grid">
+            <div class="about__content">
+                <div class="about__badge">О платформе</div>
+                <h2 class="about__title">Переосмыслите подход к развитию</h2>
+                <p class="about__text">Yield-Xie — это передовая цифровая инфраструктура, где обучение встроено в
+                    реальные рабочие процессы.</p>
+                <ul class="about__features">
+                    <li class="about__feature-item"><i data-lucide="zap"></i><span>Быстрый старт без опыта</span></li>
+                    <li class="about__feature-item"><i data-lucide="cpu"></i><span>AI-инструменты для задач</span></li>
+                </ul>
+                <div class="about__cta"><a href="#courses" class="btn btn--mustard">Оценить перспективы</a></div>
+            </div>
+            <div class="about__visual">
+                <div class="infographic">
+                    <svg viewBox="0 0 400 400" class="infographic__svg">
+                        <path id="growth-path"
+                            d="M40 340C40 340 100 340 140 260C180 180 220 220 260 140C300 60 360 60 360 60"
+                            stroke="var(--color-mustard)" stroke-width="4" stroke-linecap="round" fill="none" />
+                        <circle class="infographic__point p1" cx="40" cy="340" r="8" fill="var(--color-mustard)" />
+                        <circle class="infographic__point p4" cx="360" cy="60" r="10" fill="var(--color-mustard)" />
+                        <text x="50" y="360" class="infographic__label" fill="var(--color-cream)">Старт</text>
+                        <text x="310" y="40" class="infographic__label infographic__label--bold"
+                            fill="var(--color-mustard)">Yield-Xie</text>
+                    </svg>
+                    <div class="infographic__card animate-on-scroll">
+                        <span class="infographic__card-val">+300%</span>
+                        <span class="infographic__card-txt">эффективность</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="benefits" id="courses">
+    <div class="container">
+        <div class="benefits__header">
+            <span class="benefits__subtitle animate-on-scroll">Наши ценности</span>
+            <h2 class="benefits__title animate-on-scroll">Решения, которые меняют правила игры</h2>
+        </div>
+        <div class="benefits__grid">
+            <div class="benefit-card animate-on-scroll">
+                <div class="benefit-card__icon">
+                    <svg viewBox="0 0 100 100" class="morph-svg">
+                        <path class="morph-path" d="M20,50 Q20,20 50,20 T80,50 T50,80 T20,50"
+                            fill="var(--color-mustard)" opacity="0.2" />
+                    </svg>
+                    <i data-lucide="globe"></i>
+                </div>
+                <h3>Платформа года</h3>
+                <p>Доступ к обучению открыт из любой точки мира. Методологии рынка ЕС.</p>
+            </div>
+            <div class="benefit-card animate-on-scroll">
+                <div class="benefit-card__icon">
+                    <svg viewBox="0 0 100 100" class="morph-svg">
+                        <path class="morph-path" d="M20,50 Q20,20 50,20 T80,50 T50,80 T20,50"
+                            fill="var(--color-light-olive)" opacity="0.2" />
+                    </svg>
+                    <i data-lucide="shield-check"></i>
+                </div>
+                <h3>Проверенный партнер</h3>
+                <p>Экспертная поддержка на всех этапах. Мы гарантируем качество контента.</p>
+            </div>
+            <div class="benefit-card animate-on-scroll">
+                <div class="benefit-card__icon">
+                    <svg viewBox="0 0 100 100" class="morph-svg">
+                        <path class="morph-path" d="M20,50 Q20,20 50,20 T80,50 T50,80 T20,50"
+                            fill="var(--color-mustard)" opacity="0.2" />
+                    </svg>
+                    <i data-lucide="layers"></i>
+                </div>
+                <h3>Легкий старт</h3>
+                <p>Пошаговый путь, понятный каждому. От основ до архитектуры систем.</p>
+            </div>
+        </div>
+    </div>
+    <div class="wave-transition">
+        <svg viewBox="0 0 1440 120" fill="none">
+            <path
+                d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64V120H1360C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120H0Z"
+                fill="var(--color-swamp)" />
+        </svg>
+    </div>
+</section>
+
+<section class="innovations" id="innovations">
+    <div class="container">
+        <div class="innovations__grid">
+            <div class="innovations__info">
+                <div class="innovations__badge">Технологии</div>
+                <h2 class="innovations__title">Цифровая инфраструктура</h2>
+                <div class="tech-menu">
+                    <div class="tech-menu__item active" data-tech="ai">
+                        <span class="tech-menu__num">01</span>
+                        <div class="tech-menu__content">
+                            <h4>AI-инструменты</h4>
+                            <p>Автоматизация кода и аналитика.</p>
+                        </div>
+                    </div>
+                    <div class="tech-menu__item" data-tech="cloud">
+                        <span class="tech-menu__num">02</span>
+                        <div class="tech-menu__content">
+                            <h4>Cloud X</h4>
+                            <p>Мгновенный доступ к мощностям.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="innovations__display">
+                <div class="scanner">
+                    <svg viewBox="0 0 400 400" class="scanner__svg">
+                        <circle cx="200" cy="200" r="60" fill="none" stroke="var(--color-mustard)" stroke-width="2"
+                            stroke-dasharray="10 5" class="rotate-anim" />
+                        <g id="group-ai" class="tech-group visible">
+                            <circle cx="200" cy="200" r="10" fill="var(--color-mustard)" class="pulse-anim" />
+                        </g>
+                        <g id="group-cloud" class="tech-group">
+                            <path d="M150,150 Q200,100 250,150 T350,200 Z" stroke="var(--color-mustard)"
+                                stroke-width="2" fill="none" />
+                        </g>
+                    </svg>
+                    <div class="scanner__status">System: <span id="status-text">AI_ACTIVE</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="blog" id="blog">
+    <div class="container">
+        <div class="blog__header">
+            <span class="blog__badge">Наш блог</span>
+            <h2 class="blog__title">Практики, применимые уже сегодня</h2>
+            <p class="blog__subtitle">Технологии, которые работают на вас: читайте экспертные статьи от ведущих
+                инженеров Yield-Xie.</p>
+        </div>
+
+        <div class="blog__grid">
+            <article class="blog-card tilt-js">
+                <div class="blog-card__image">
+                    <img src="img/placeholder.png" alt="AI в обучении">
+                    <div class="blog-card__category">Технологии</div>
+                </div>
+                <div class="blog-card__content">
+                    <span class="blog-card__date">14 Января, 2026</span>
+                    <h3>AI-инструменты для реальных задач в 2026 году</h3>
+                    <p>Как нейросети меняют подход к написанию кода и почему это важно для новичков.</p>
+                    <div class="blog-card__footer">
+                        <a href="#" class="blog-card__link">Получить больше информации</a>
+                        <div class="reading-progress">
+                            <svg viewBox="0 0 36 36">
+                                <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    fill="none" stroke="var(--color-mustard)" stroke-width="2"
+                                    stroke-dasharray="75, 100" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card tilt-js">
+                <div class="blog-card__image">
+                    <img src="img/placeholder.png" alt="Карьера в IT">
+                    <div class="blog-card__category">Карьера</div>
+                </div>
+                <div class="blog-card__content">
+                    <span class="blog-card__date">08 Января, 2026</span>
+                    <h3>Постройте карьеру, которая работает на вас</h3>
+                    <p>Стратегия роста в условиях высокой конкуренции на глобальном IT-рынке.</p>
+                    <div class="blog-card__footer">
+                        <a href="#" class="blog-card__link">Получить больше информации</a>
+                        <div class="reading-progress">
+                            <svg viewBox="0 0 36 36">
+                                <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    fill="none" stroke="var(--color-mustard)" stroke-width="2"
+                                    stroke-dasharray="40, 100" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card tilt-js">
+                <div class="blog-card__image">
+                    <img src="img/placeholder.png" alt="Облачные решения">
+                    <div class="blog-card__category">Инновации</div>
+                </div>
+                <div class="blog-card__content">
+                    <span class="blog-card__date">02 Января, 2026</span>
+                    <h3>Cloud X: переосмыслите подход к разработке</h3>
+                    <p>Разбираем новую облачную инфраструктуру, доступную теперь и в Европе.</p>
+                    <div class="blog-card__footer">
+                        <a href="#" class="blog-card__link">Получить больше информации</a>
+                        <div class="reading-progress">
+                            <svg viewBox="0 0 36 36">
+                                <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    fill="none" stroke="var(--color-mustard)" stroke-width="2"
+                                    stroke-dasharray="90, 100" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact__grid">
+            <div class="contact__info">
+                <div class="contact__badge">Свяжитесь с нами</div>
+                <h2 class="contact__title">Готовы расширить горизонты?</h2>
+                <p class="contact__text">Запросите доступ к платформе или получите бесплатную консультацию по всем
+                    вопросам развития вашей карьеры.</p>
+
+                <div class="contact__methods">
+                    <div class="contact__method">
+                        <i data-lucide="phone-call"></i>
+                        <div>
+                            <span>Телефон (UK)</span>
+                            <p>+44 20 7946 0123</p>
+                        </div>
+                    </div>
+                    <div class="contact__method">
+                        <i data-lucide="mail"></i>
+                        <div>
+                            <span>Email</span>
+                            <p>hello@yield-xie.blog</p>
+                        </div>
+                    </div>
+                    <div class="contact__method">
+                        <i data-lucide="map-pin"></i>
+                        <div>
+                            <span>Офис</span>
+                            <p>30 St Mary Axe, London EC3A 8BF, United Kingdom</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact__form-wrapper">
+                <form class="contact__form" id="yield-form">
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder=" " required>
+                        <label for="name">Ваше имя</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder=" " required>
+                        <label for="email">Электронная почта</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" id="phone" placeholder=" " required>
+                        <label for="phone">Телефон (только цифры)</label>
+                        <span class="error-msg" id="phone-error">Введите корректный номер</span>
+                    </div>
+
+                    <div class="captcha">
+                        <label>Подтвердите, что вы не робот: <span id="captcha-question"></span></label>
+                        <input type="number" id="captcha-answer" placeholder="Ответ" required>
+                    </div>
+
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="agree" required>
+                        <label for="agree">Согласен на обработку персональных данных</label>
+                    </div>
+
+                    <button type="submit" class="btn btn--submit">
+                        <span>Запросить доступ</span>
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+                </form>
+
+                <div class="form-success" id="form-success">
+                    <div class="success-icon">
+                        <svg viewBox="0 0 52 52">
+                            <circle cx="26" cy="26" r="25" fill="none" stroke="var(--color-mustard)" stroke-width="2" />
+                            <path fill="none" stroke="var(--color-mustard)" stroke-width="2"
+                                d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                        </svg>
+                    </div>
+                    <h3>Заявка принята!</h3>
+                    <p>Наш эксперт свяжется с вами в течение 15 минут.</p>
+                    <button class="btn btn--outline" onclick="resetForm()">Вернуться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
+  <div class="wave-divider">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path
+        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+        class="shape-fill"></path>
+    </svg>
+  </div>
+
+  <div class="container footer__container">
+    <div class="footer__col footer__col--brand">
+      <a href="./#hero" class="logo logo--footer">
+        <span class="logo__text">Yield-Xie</span>
       </a>
-    </p>
+      <p class="footer__description">
+        Технологии нового поколения для тех, кто строит будущее сегодня. Платформа года в сегменте IT-образования.
+      </p>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Навигация</h4>
+      <ul class="footer__list">
+        <li><a href="./#hero">Главная</a></li>
+        <li><a href="./#about">О нас</a></li>
+        <li><a href="./#courses">Программы</a></li>
+        <li><a href="./#contact">Контакты</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Документы</h4>
+      <ul class="footer__list">
+<li><a href="./privacy.html">Privacy Policy</a></li>
+<li><a href="./cookies.html">Cookie Policy</a></li>
+<li><a href="./terms.html">Terms of Service</a></li>
+<li><a href="./return.html">Return Policy</a></li>
+<li><a href="./disclaimer.html">Disclaimer</a></li>
+<li><a href="./personal-data-policy.html">Data Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Контакты</h4>
+      <ul class="footer__contact-list">
+        <li>
+          <i data-lucide="phone"></i>
+          <a href="tel:+442079460000">+44 20 7946 0000</a>
+        </li>
+        <li>
+          <i data-lucide="mail"></i>
+          <a href="mailto:hello@yield-xie.blog">hello@yield-xie.blog</a>
+        </li>
+        <li>
+          <i data-lucide="map-pin"></i>
+          <span>22 Bishopsgate, London EC2N 4BQ, UK</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container">
+      <p>&copy; 2026 Yield-Xie Academy. Все права защищены. Предложение активно только в странах ЕС.</p>
+    </div>
   </div>
 </footer>
-
-
+<div class="cookie-popup" id="cookie-popup">
+  <div class="cookie-popup__container">
+    <div class="cookie-popup__inner">
+      <div class="cookie-icon">
+        <i data-lucide="cookie"></i>
+      </div>
+      <p class="cookie-text">
+        Этот сайт использует cookies для улучшения работы. Подробнее — в нашей
+        <a href="./cookies.html">Cookie политике</a>.
+      </p>
+      <button class="btn btn--mustard btn--sm" id="cookie-accept">Принять</button>
+    </div>
+  </div>
+</div>
   </body>
 </html>
