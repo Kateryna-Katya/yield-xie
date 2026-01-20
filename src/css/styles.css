@@ -1566,3 +1566,111 @@ ul {
         padding: 15px;
     }
 }
+/* 1. Кастомный скроллбар в стиле бренда */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-swamp);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-mustard);
+    border-radius: 5px;
+    border: 2px solid var(--color-swamp);
+}
+
+/* 2. Глобальные настройки текста */
+h1,
+h2,
+h3 {
+    text-wrap: balance;
+    /* Предотвращает висячие предлоги */
+    letter-spacing: -0.02em;
+}
+
+p {
+    max-width: 65ch;
+    /* Оптимальная длина строки для чтения */
+}
+
+/* 3. Волнообразные разделители (Shape Dividers) */
+.section-divider {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.section-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 80px;
+}
+
+/* Цвета волн для разных секций */
+.hero .section-divider fill {
+    fill: var(--color-light-olive);
+}
+
+.about .section-divider fill {
+    fill: var(--color-cream);
+}
+
+.benefits .section-divider fill {
+    fill: var(--color-swamp);
+}
+
+/* 4. Стилизация юридических страниц (pages) */
+.pages {
+    padding: 160px 0 100px;
+    background: var(--color-cream);
+    min-height: 100vh;
+}
+
+.pages h1 {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+    color: var(--color-swamp);
+    border-left: 5px solid var(--color-mustard);
+    padding-left: 20px;
+}
+
+.pages h2 {
+    margin: 40px 0 20px;
+    color: var(--color-light-olive);
+}
+
+.pages p {
+    margin-bottom: 20px;
+    opacity: 0.85;
+    font-size: 1.1rem;
+}
+
+/* 5. Эффекты при наведении на кнопки */
+.btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+    z-index: -1;
+}
+
+.btn:hover::after {
+    height: 100%;
+}
